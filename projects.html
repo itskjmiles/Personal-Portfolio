@@ -1,56 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice Portfolio</title>
-    <link rel="stylesheet" href="projects.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="projects.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="stroke">
-        <ul>
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
     </nav>
     <div>
-        <h1 class="projectsdesc">Welcome to my projects!</h1>
+      <h1 class="projectsdesc">Welcome to my projects!</h1>
     </div>
-   
+
     <div class="wrapper">
       <i id="left" class="fa-solid fa-angle-left"></i>
       <ul class="carousel">
-        <a href="https://itskjmiles.github.io/Calculator/" style="text-decoration: none;" target="_blank">
+        <a
+          href="https://itskjmiles.github.io/Calculator/"
+          style="text-decoration: none"
+          target="_blank"
+        >
+          <li class="card">
+            <div class="img">
+              <img
+                src="data:image/png;base64,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"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+            <h2>Calculator Website</h2>
+            <span></span>
+          </li>
+        </a>
+        <a
+          href="https://kjsweatherapp.netlify.app/"
+          style="text-decoration: none"
+          target="_blank"
+        >
+          <li class="card">
+            <div class="img">
+              <img src="weatherappicon.jpeg" alt="" draggable="false" />
+            </div>
+            <h2>Weather App</h2>
+            <span></span>
+          </li>
+        </a>
+
+        <a
+          href="https://kjsexpensetracker.netlify.app"
+          style="text-decoration: none"
+          target="_blank"
+        >
+          <li class="card">
+            <div class="img">
+              <img src="incometracker.png" alt="" draggable="false" />
+            </div>
+            <h2>Expense Tracker</h2>
+            <span></span>
+          </li>
+        </a>
         <li class="card">
-          <div class="img"><img src="data:image/png;base64,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" alt="img" draggable="false"></div>
-          <h2>Calculator Website</h2>
-          <span></span>
-        </li>
-      </a>
-      <a href="#" style="text-decoration: none;" target="_blank" >
-        <li class="card">
-          <div class=""><img src="" alt="" draggable="false"></div>
-          <h2></h2>
-          <span></span>
-        </li>
-      </a>
-        <li class="card">
-          <div class="img"><img src="" alt="img" draggable="false"></div>
-          <h2></h2>
-          <span></span>
-        </li>
-        <li class="card">
-          <div class="img"><img src="" alt="img" draggable="false"></div>
+          <div class="img"><img src="" alt="" draggable="false" /></div>
           <h2></h2>
           <span></span>
         </li>
       </ul>
       <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
-
-</body>
+  </body>
 </html>
+
